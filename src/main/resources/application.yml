@@ -9,3 +9,6 @@ eureka:
   client:
     service-url:
       default-zone: ${EUREKA_HOST}
+  instance:
+    prefer-ip-address: true
+    hostname: ${EUREKA_NAME}
