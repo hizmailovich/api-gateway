@@ -19,6 +19,10 @@ public class GatewayConfig {
                         route -> route.path("/review/**")
                                 .filters(filter -> filter.stripPrefix(1))
                                 .uri("lb://review"))
+                .route("rating_route",
+                        route -> route.path("/rating/**")
+                                .filters(filter -> filter.stripPrefix(1))
+                                .uri("lb://rating"))
                 .build();
     }
 
